@@ -1,0 +1,33 @@
+<div class="container wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="inner">
+                <h3>Employees</h3>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">employee_name</th>
+                            <th scope="col">employee_salary</th>
+                            <th scope="col">employee_age</th>
+                            <th scope="col">profile_image</th>
+                            <th scope="col">action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let employee of EmployeesList">
+                            <th scope="row">{{employee.id}}</th>
+                            <td>{{employee.employee_name}}</td>
+                            <td>{{employee.employee_salary}}</td>
+                            <td>{{employee.employee_age}}</td>
+                            <td>{{employee.profile_image}}</td>                        
+                            <td>
+                                <button type="button" class="btn btn-success btn-sm move-right" [routerLink]="['/employee/', employee.id]">View</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
